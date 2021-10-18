@@ -8,31 +8,32 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="main.css" rel="stylesheet">
-    <script src="index.js" ></script>
+    <script src="index.js"></script>
 
-    <title>Axel Corp.</title>
+    <title>Log in</title>
 </head>
 <body>
 	<main class="container-fluid">
 		<div id="login" class="row align-items-center">
-			<div class="col"></div>
+			<div class="row">
+				<div class="col"></div>
 			
 			<div id="left-login" class="col">
 				<h3 class="text-end fw-bold fs-1 mt-3 me-4">Member log in</h3>
 
-				<form class="mt-5 me-4">
+				<form id="loginForm" class="mt-5 me-4">
 					<div class="mb-3">
 						<label for="exampleInputEmail1" class="form-label fs-5">Email (required)</label>
-						<input type="email" class="form-control fs-5" id="exampleInputEmail1" aria-describedby="emailHelp">
+						<input type="email" class="form-control fs-5" id="userEmail" aria-describedby="emailHelp" required>
 						<div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
 					</div>
 					<div class="mb-3">
 						<label for="exampleInputPassword1" class="form-label fs-5">Password (required)</label>
-						<input type="password" class="form-control fs-5" id="exampleInputPassword1">
+						<input type="password" class="form-control fs-5" id="userPassword" required>
 					</div>
 					<div class="row">
 						<div class="col">
-							<a type="submit" class="item-ship unselect">Log in</a>
+							<a type="submit" class="item-ship unselect" onclick="submitForm()">Log in</a>
 						</div>
 						<div class="col me-5">
 							<div class="row">
@@ -53,19 +54,51 @@
 				<a type="submit" class="signup-btn unselect ms-4">Sign up</a>	
 			</div>
 			<div class="col"></div>
+			</div>
+			
 		</div>
 
 		<div class="row contact-us">
-			<div class="col">
-				<h3 class="text-start fw-bold fs-1 mt-3 me-4">Join our community</h3>
+			<div class="col-5">
+				<h3 class="text-start fw-bold fs-1 mt-3">Join our community</h3>
 
-				<a href="https://www.java.com/" target="_blank"><img class="skill-item" src="./assets/images/java.svg" alt="Java" title="Java" height="50"></a>
+				<a href="#" target="_blank"><img class="community-item" src="./images/twitch.svg" alt="Twitch" title="Twitch" height="30"></a>
+
+				<a href="#" target="_blank"><img class="community-item" src="./images/twitter.svg" alt="Twitter" title="Twitter" height="30"></a>
+
+				<a href="#" target="_blank"><img class="community-item" src="./images/youtube.svg" alt="YouTube" title="YouTube" height="30"></a>
 			</div>
 
-			<div class="col">
+			<div class="col-2"></div>
+
+			<div class="col-5">
+				<h3 class="text-end fw-bold fs-1 mt-3">Subscribe to our newsletter</h3>
 				
+				<form class="mt-5 me-4">
+					<div class="mb-3">
+						<label for="exampleInputEmail1" class="form-label fs-5">Name (required)</label>
+						<input type="text" class="form-control fs-5" id="exampleInputEmail1" aria-describedby="nameHelp">
+					</div>
+					<div class="mb-3">
+						<label for="exampleInputEmail1" class="form-label fs-5">Email (required)</label>
+						<input type="email" class="form-control fs-5" id="exampleInputEmail1" aria-describedby="emailHelp">
+					</div>
+					<div class="mb-3">
+						<label for="exampleInputEmail1" class="form-label fs-5">Phone</label>
+						<input type="number" class="form-control fs-5" id="exampleInputEmail1" aria-describedby="emailHelp">
+					</div>
+					<div class="row">
+						<div class="col">
+							<a type="submit" class="item-ship unselect">Subscribe</a>
+						</div>
+					</div>
+				</form>
 			</div>
+
 		</div>
+		<footer class="row justify-content-center mt-5 mb-3">
+			<div class="footer-copyright text-center text-sm"><a>© Axel Briano Suherik 2021</a></div>
+		</footer>
 	</main>
     
 
